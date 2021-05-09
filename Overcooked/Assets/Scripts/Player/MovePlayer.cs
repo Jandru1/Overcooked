@@ -48,7 +48,8 @@ public class MovePlayer : MonoBehaviour
             controller.transform.LookAt(controller.transform.position + playerInput);
         
         // Animations and dash:
-        if(animator.GetBool("isWalking") && Input.GetKey(KeyCode.Space) && dashReloadCount >= dashReload) { // Start Dash
+        if(animator.GetBool("isWalking") && (Input.GetKey(KeyCode.RightAlt) || Input.GetKey(KeyCode.LeftAlt)) 
+            && dashReloadCount >= dashReload) { // Start Dash
             animator.SetBool("isDashing", true);
             animator.SetBool("isWalking", false);
             runningDust.Play();
