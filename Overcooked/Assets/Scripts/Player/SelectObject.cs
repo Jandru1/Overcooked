@@ -8,12 +8,16 @@ public class SelectObject : MonoBehaviour
     private Collider m_Collider;
     private GameObject lookingAtObject;
     private GameObject selectedObject;
-    private bool carryingObject;
+    public bool carryingObject;
+    private Animator animator;
+
 
     Shader outlineShader;
     Shader previousShader;
 
     void Start(){
+
+        animator = GetComponent<Animator>();
         m_Collider = GetComponent<Collider>();
         outlineShader = Shader.Find("Outlined/Outline");
         lookingAtObject = null;
@@ -68,6 +72,9 @@ public class SelectObject : MonoBehaviour
                 carryingObject = false;
             }
         }
+
+        if (carryingObject) animator.SetBool("isCarrying", true);
+        else animator.SetBool("isCarrying", false);
 
     }
 }
