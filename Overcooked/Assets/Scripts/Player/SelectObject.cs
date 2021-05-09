@@ -8,9 +8,13 @@ public class SelectObject : MonoBehaviour
     private Collider m_Collider;
     private GameObject lookingAtObject;
     private GameObject selectedObject;
-    private bool carryingObject;
+    public bool carryingObject;
+    private Animator animator;
+
 
     void Start(){
+
+        animator = GetComponent<Animator>();
         m_Collider = GetComponent<Collider>();
         lookingAtObject = null;
         selectedObject = null;
@@ -43,6 +47,9 @@ public class SelectObject : MonoBehaviour
                 carryingObject = false;
             }
         }
+
+        if (carryingObject) animator.SetBool("isCarrying", true);
+        else animator.SetBool("isCarrying", false);
 
     }
 }
