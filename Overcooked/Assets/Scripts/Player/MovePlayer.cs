@@ -1,4 +1,3 @@
-using System.Diagnostics;
 using System;
 using System.Threading;
 using System.Collections;
@@ -9,10 +8,10 @@ using UnityEngine;
 public class MovePlayer : MonoBehaviour
 {
 
-    public float walkSpeed = 2.0f;
-    public float dashSpeed = 5.0f;
-    public int dashSteps = 175;
-    public int dashReload = 500;
+    public float walkSpeed = 2.6f;
+    public float dashSpeed = 9.0f;
+    public float dashTime = 0.4f;
+    public float dashReloadTime = 3.0f;
     public ParticleSystem runningDust;
 
 
@@ -20,8 +19,8 @@ public class MovePlayer : MonoBehaviour
     private CharacterController controller;
     private float playerSpeed;
     private Vector3 dashDirection;
-    private int dashCount;
-    private int dashReloadCount;
+    private float dashCount;
+    private float dashReloadCount;
 
     // Start is called before the first frame update
     void Start()
@@ -29,12 +28,12 @@ public class MovePlayer : MonoBehaviour
         animator = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
         playerSpeed = walkSpeed;
-        dashCount = 0;
-        dashReloadCount = dashReload;
+        dashCount = 0.0f;
+        dashReloadCount = 0.0f;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
         //Movement:
@@ -49,7 +48,7 @@ public class MovePlayer : MonoBehaviour
         
         // Animations and dash:
         if(animator.GetBool("isWalking") && (Input.GetKey(KeyCode.RightAlt) || Input.GetKey(KeyCode.LeftAlt)) 
-            && dashReloadCount >= dashReload) { // Start Dash
+            && dashReloadCount == 0.0f && !animator.GetBool("isCarrying")) { // Start Dash
             animator.SetBool("isDashing", true);
             animator.SetBool("isWalking", false);
             runningDust.Play();
@@ -60,16 +59,16 @@ public class MovePlayer : MonoBehaviour
             controller.transform.LookAt(controller.transform.position + dashDirection);
 
         } else if (animator.GetBool("isDashing")){ 
-            if (dashCount < dashSteps){ // Count the time on the dash
+            if (dashCount < dashTime && !(controller.collisionFlags == CollisionFlags.Sides)){ // Count the time on the dash
                 playerInput = dashDirection;
-                ++dashCount;
+                dashCount += Time.deltaTime;
             } else { // End dash
                 animator.SetBool("isDashing", false);
                 animator.SetBool("isWalking", true);
                 runningDust.Stop();
                 playerSpeed = walkSpeed;
                 dashCount = 0;
-                dashReloadCount = 0;
+                dashReloadCount = dashReloadTime;
             }
         }
         else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A) // Left move
@@ -77,12 +76,13 @@ public class MovePlayer : MonoBehaviour
             || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W) // Forward move
             || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) // Backward move
             {
-                ++dashReloadCount;
+                dashReloadCount = Math.Max(dashReloadCount - Time.deltaTime, 0.0f);
                 animator.SetBool("isWalking", true);
             }
 
         else { // Idle
-            ++dashReloadCount;
+
+            dashReloadCount = Math.Max(dashReloadCount - Time.deltaTime, 0.0f);
             animator.SetBool("isDashing", false);
             animator.SetBool("isWalking", false);
         }

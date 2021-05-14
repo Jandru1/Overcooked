@@ -6,6 +6,16 @@ public class PickUpObject : MonoBehaviour
 {
     public Transform destinationPos;
 
+    public bool onFloor;
+    private bool beingCarried;
+    void Start(){
+        onFloor = false;
+        beingCarried = false;
+    }
+    void Update() {
+        if(beingCarried)
+            this.transform.position = destinationPos.position;
+    }
     public void PickUp()
     {
         this.transform.position = destinationPos.position;
@@ -15,12 +25,21 @@ public class PickUpObject : MonoBehaviour
         GetComponent<BoxCollider>().enabled = false;
         GetComponent<Rigidbody>().useGravity = false;
         GetComponent<Rigidbody>().freezeRotation = true;
+        if(onFloor){
+            onFloor = false;
+            this.transform.localScale /= 1.3f;
+        }
+        beingCarried = true;
+        GetComponent<AudioSource>().Play(0);
     }
     public void Drop() {
+        this.transform.localScale *= 1.3f;
         GetComponent<BoxCollider>().enabled = true;
         GetComponent<Rigidbody>().useGravity = true;
         GetComponent<Rigidbody>().freezeRotation = false;
         this.transform.parent = null;
+        onFloor = true;
+        beingCarried = false;
     }
 
     public void Place(Vector3 finalPos){
@@ -30,5 +49,7 @@ public class PickUpObject : MonoBehaviour
         GetComponent<BoxCollider>().enabled = true;
         GetComponent<Rigidbody>().useGravity = true;
         GetComponent<Rigidbody>().freezeRotation = true;
+        beingCarried = false;
     }
+
 }

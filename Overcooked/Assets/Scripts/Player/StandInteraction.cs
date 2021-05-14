@@ -69,15 +69,52 @@ public class StandInteraction : MonoBehaviour
         }
     }
 
+    private GameObject objectInFront(){ // If a pickable object is onFloor in front of the player returns true, else returns null
+        Vector3 startRaycast = transform.position;
+        startRaycast.y = m_Collider.bounds.min.y +.01f;
+        RaycastHit hit;
+        
+        if(Physics.Raycast(startRaycast, transform.TransformDirection (Vector3.forward), out hit, 0.85f)) {
+            if(hit.collider.tag == "Pickable" && hit.collider.GetComponent<PickUpObject>().onFloor){
+                return hit.collider.gameObject;
+            }
+        }
+        return null;
+    }
+
     void Update()
     {
         if(selectStand()){ // If we are looking at a stand, interact with it
             interactWithStand();
-        } else if(Input.GetKeyUp(KeyCode.Space) && carryingObject){
-            selectedObject.GetComponent<PickUpObject>().Drop();
-            selectedObject = null;
-            carryingObject = false;
-            animator.SetBool("isCarrying", false);
+        } else if(Input.GetKeyUp(KeyCode.Space)){
+            if(!carryingObject) {
+                GameObject droppedObject = objectInFront();
+                if(droppedObject != null) {
+                    selectedObject = droppedObject;
+                    selectedObject.GetComponent<PickUpObject>().PickUp();
+                    carryingObject = true;
+                    animator.SetBool("isCarrying", true);
+                }
+            } else {
+                selectedObject.GetComponent<PickUpObject>().Drop();
+                selectedObject = null;
+                carryingObject = false;
+                animator.SetBool("isCarrying", false);
+            }
         }
+    }
+
+    
+    // Push rigid bodies:
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        float pushPower = 2.0f;
+        Rigidbody body = hit.collider.attachedRigidbody;
+
+        if (body == null || body.isKinematic)
+            return;
+
+        Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
+        body.velocity = pushDir * pushPower;
     }
 }

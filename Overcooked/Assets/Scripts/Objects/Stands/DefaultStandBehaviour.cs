@@ -46,6 +46,7 @@ public class DefaultStandBehaviour : MonoBehaviour
     public void Highlight(){
         previousShader = GetComponent<Renderer>().material.shader;
         GetComponent<Renderer>().material.shader = outlineShader;
+        GetComponent<AudioSource>().Play(0);
     }
 
     public void UnHighlight(){
