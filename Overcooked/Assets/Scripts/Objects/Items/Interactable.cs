@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Interactable : MonoBehaviour
+abstract public class Interactable : MonoBehaviour
 {
     public float interactionTimeNeeded;
     public float timer;

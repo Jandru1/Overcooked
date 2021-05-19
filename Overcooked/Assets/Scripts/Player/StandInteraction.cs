@@ -91,11 +91,11 @@ public class StandInteraction : MonoBehaviour
 
     void Update()
     {
-        if(interactingWithStand){ // If we are interacting:
+        if(interactingWithStand){ // If we are already interacting with a stand:
             interactingWithStand = standScript.interacting;
-        } else if(selectStand()){ // If we are looking at a stand, interact with it
+        } else if(selectStand()){ // If we are looking at a stand, interact with it:
             interactWithStand();
-        } else if(Input.GetKeyUp(KeyCode.Space)){
+        } else if(Input.GetKeyUp(KeyCode.Space)){ // If we aren't looking at a stand:
             if(!carryingObject) {
                 GameObject droppedObject = objectInFront();
                 if(droppedObject != null) {

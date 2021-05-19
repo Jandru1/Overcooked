@@ -39,7 +39,7 @@ public class DefaultStandBehaviour : MonoBehaviour
         itemOnTop.GetComponent<PickUpObject>().Place(topPos);
     }
 
-    public GameObject GrabItem(){
+    virtual public GameObject GrabItem(){
         hasItemOnTop = false;
         itemOnTop.GetComponent<PickUpObject>().PickUp();
         GameObject lastItem = itemOnTop;
