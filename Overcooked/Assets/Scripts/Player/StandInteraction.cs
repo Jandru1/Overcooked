@@ -11,16 +11,17 @@ public class StandInteraction : MonoBehaviour
     public bool carryingObject;
     private Animator animator;
     private DefaultStandBehaviour standScript;
+    public bool interactingWithStand;
 
 
 
     void Start(){
-
         animator = GetComponent<Animator>();
         m_Collider = GetComponent<Collider>();
         lookingAtStand = null;
         selectedObject = null;
         carryingObject = false;
+        interactingWithStand = false;
     }
 
     // Selects and highlights the stand where is looking at. Returns true if looking at a stand.
@@ -67,6 +68,12 @@ public class StandInteraction : MonoBehaviour
                 animator.SetBool("isCarrying", false);
             }
         }
+        
+        //Interact with the object in the stand:
+        if((Input.GetKeyDown(KeyCode.RightControl) || Input.GetKeyDown(KeyCode.LeftControl)) && !carryingObject){
+            standScript.startInteraction();
+            interactingWithStand = standScript.interacting;
+        }
     }
 
     private GameObject objectInFront(){ // If a pickable object is onFloor in front of the player returns true, else returns null
@@ -84,7 +91,9 @@ public class StandInteraction : MonoBehaviour
 
     void Update()
     {
-        if(selectStand()){ // If we are looking at a stand, interact with it
+        if(interactingWithStand){ // If we are interacting:
+            interactingWithStand = standScript.interacting;
+        } else if(selectStand()){ // If we are looking at a stand, interact with it
             interactWithStand();
         } else if(Input.GetKeyUp(KeyCode.Space)){
             if(!carryingObject) {

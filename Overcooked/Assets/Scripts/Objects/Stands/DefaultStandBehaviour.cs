@@ -6,6 +6,7 @@ public class DefaultStandBehaviour : MonoBehaviour
 {
     public bool hasItemOnTop;
     public GameObject itemOnTop;
+    public bool interacting;
 
     
     private Shader outlineShader;
@@ -23,6 +24,9 @@ public class DefaultStandBehaviour : MonoBehaviour
             hasItemOnTop = true;
             PlaceItem(itemOnTop);
         }
+
+        //Top item interaction initializations:
+        interacting = false;
 
         //Highlight initializations:
         previousShader = null;
@@ -52,5 +56,17 @@ public class DefaultStandBehaviour : MonoBehaviour
     public void UnHighlight(){
         GetComponent<Renderer>().material.shader = previousShader;
         previousShader = null;
+    }
+
+    public void startInteraction(){
+        if(itemOnTop.GetComponent<Interactable>() != null) { // If the object is interactable
+            itemOnTop.GetComponent<Interactable>().StartInteraction(gameObject);
+            interacting = true;
+        }
+    }
+
+    public void finishedInteracting(){
+        Debug.Log("Finished interacting");
+        interacting = false;
     }
 }

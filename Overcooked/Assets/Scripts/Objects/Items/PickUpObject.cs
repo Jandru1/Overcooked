@@ -46,6 +46,7 @@ public class PickUpObject : MonoBehaviour
         this.transform.parent = null;
         this.transform.position = finalPos;
         Quaternion rotation = Quaternion.LookRotation(this.transform.forward, Vector3.up);
+        this.transform.rotation = rotation;
         GetComponent<BoxCollider>().enabled = true;
         GetComponent<Rigidbody>().useGravity = true;
         GetComponent<Rigidbody>().freezeRotation = true;
