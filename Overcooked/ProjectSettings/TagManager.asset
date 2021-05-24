@@ -7,6 +7,8 @@ TagManager:
   - Selectable
   - Pickable
   - Image
+  - RightHand
+  - Food
   layers:
   - Default
   - TransparentFX

@@ -14,6 +14,8 @@ public class MovePlayer : MonoBehaviour
     public float dashReloadTime = 3.0f;
     public ParticleSystem runningDust;
 
+    public bool isInRange;
+    public KeyCode interactKey;
 
     private Animator animator;
     private CharacterController controller;
@@ -35,6 +37,16 @@ public class MovePlayer : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (isInRange)
+        {
+            if (Input.GetKeyDown(interactKey))
+            {
+                Debug.Log("Animamos");
+
+                Animamos();
+              //  StartCoroutine(Acortar());
+            }
+        }
 
         //Movement:
         float horizontalMove = Input.GetAxis("Horizontal");
@@ -94,5 +106,46 @@ public class MovePlayer : MonoBehaviour
         
         // Move:
         controller.Move(playerInput * playerSpeed * Time.deltaTime);
+
+
+    }
+
+    private void Animamos()
+    {
+        animator.SetBool("isCutting", true);
+        StartCoroutine(ThreeSeconds());
+    }
+
+    IEnumerator ThreeSeconds()
+    {
+        yield return new WaitForSeconds(3);
+        animator.SetBool("isCutting", false);
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Food"))
+        {
+            isInRange = true;
+            Debug.Log("Naurto now in range");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Food"))
+        {
+            isInRange = false;
+            Debug.Log("Naruto now NOT in range");
+        }
+    }
+
+    IEnumerator Acortar()
+    {
+        animator.SetBool("isCutting", true);
+        yield return new WaitForSeconds(3);
+        animator.SetBool("isCutting", false);
+        Debug.Log("Wait is over");
     }
 }

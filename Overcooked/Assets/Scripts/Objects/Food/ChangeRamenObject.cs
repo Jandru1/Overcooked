@@ -23,7 +23,6 @@ public class ChangeRamenObject : MonoBehaviour
             if(Input.GetKeyDown(interactKey))
             {
                 StartCoroutine(Peracagon());
-                Replace(obj1, obj2);
             }
         }
     }
@@ -33,7 +32,7 @@ public class ChangeRamenObject : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             isInRange = true;
-            Debug.Log("Player now in range");
+          //  Debug.Log("Player now in range");
         }
     }
 
@@ -42,7 +41,7 @@ public class ChangeRamenObject : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         { 
             isInRange = false;
-            Debug.Log("Player now NOT in range");
+        //    Debug.Log("Player now NOT in range");
         }
     }
     void Replace(GameObject obj1, GameObject obj2)
@@ -54,6 +53,7 @@ public class ChangeRamenObject : MonoBehaviour
     IEnumerator Peracagon()
     {
         yield return new WaitForSeconds(3);
-        Debug.Log("Wait is over");
+      //  Debug.Log("Wait is over");
+        Replace(obj1, obj2);
     }
 }
