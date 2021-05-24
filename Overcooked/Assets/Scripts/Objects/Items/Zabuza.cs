@@ -10,6 +10,7 @@ public class Zabuza : MonoBehaviour
     private Vector3 x;
     private Quaternion y;
 
+    private AudioSource myAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,8 @@ public class Zabuza : MonoBehaviour
         //espada = GetComponent<GameObject>();
         x = espada.transform.position;
         y = espada.transform.rotation;
+
+        myAudio = espada.GetComponent<AudioSource>();
 
     }
 
@@ -35,9 +38,11 @@ public class Zabuza : MonoBehaviour
             //      espada.setActive(true);
 
             // replacing the feet by the item
+          //  myAudio.Play();
+
             espada.transform.position = NarutoRightHand.transform.position;
             espada.transform.rotation = Quaternion.Euler(-123, -10, 7);
-           // espada.transform.parent = NarutoRightHand.transform.parent;
+            // espada.transform.parent = NarutoRightHand.transform.parent;
         }
 
         else
