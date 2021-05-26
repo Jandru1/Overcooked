@@ -7,14 +7,24 @@ public class StopAnimation : MonoBehaviour
 {
     Animator anim;
 
+    GameObject o;
+
+    private int i = 0;
+
     private RawImage Image;
+
+    GameObject go;
 
     void Start()
     {
+    //   anim = o.transform.parent.GetComponent<Animator>();
+
         anim = GetComponent<Animator>();
         Image = GetComponent<RawImage>();
-        anim.SetBool("ReceiptEnters", true);
+        go = GetComponent<GameObject>();
+
         anim.SetBool("ReceiptLeaves", false);
+        anim.SetBool("ReceiptEnters", false);
 
         StartCoroutine(Waiter());
     }
@@ -25,18 +35,37 @@ public class StopAnimation : MonoBehaviour
 
     IEnumerator Waiter()
     {
-        Debug.Log("eeeeeeeeeeee");
-        yield return new WaitForSeconds(5);
-        Debug.Log("AAAAAAAAAAAAAAAA");
-        anim.SetBool("ReceiptEnters", false);
-        anim.SetBool("ReceiptLeaves", true);
-    }
+        if (!anim.GetBool("ReceiptEnters") & !anim.GetBool("ReceiptLeaves"))
+        {
+            anim.SetBool("ReceiptEnters", true);
+            anim.SetBool("ReceiptLeaves", false);
+            ++i;
 
+        }
+        Debug.Log("i = "+ i);
+        if (anim.GetBool("ReceiptEnters"))//Condition of ReceiptDone
+        {
+            yield return new WaitForSeconds(5);
+            anim.SetBool("ReceiptEnters", false);
+            anim.SetBool("ReceiptLeaves", true);
+        }
+
+    }
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Image"))
         {
-            anim.enabled = false;
+            Debug.Log("ENTRAMOS EN COLLIDER");
+            anim.speed = 0;
         }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Image"))
+        {
+          //  anim.enabled = true;
+        }
+    }
+    
 }
