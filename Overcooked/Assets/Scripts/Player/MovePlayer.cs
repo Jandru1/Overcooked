@@ -17,6 +17,8 @@ public class MovePlayer : MonoBehaviour
     public bool isInRange;
     public KeyCode interactKey;
 
+    private int aux = 0;
+
     private Animator animator;
     private CharacterController controller;
     private float playerSpeed;
@@ -37,6 +39,7 @@ public class MovePlayer : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
         if (isInRange)
         {
             if (Input.GetKeyDown(interactKey))
@@ -99,9 +102,16 @@ public class MovePlayer : MonoBehaviour
             animator.SetBool("isWalking", false);
         }
 
+        if(animator.GetBool("isCutting"))
+        {
+            ++aux;
+            LoadBar.instance.UserBar(1);
+            Debug.Log(aux);
+        }
 
-        
-        if(!controller.isGrounded)  // Fall
+
+
+        if (!controller.isGrounded)  // Fall
             playerInput.y -= 10;
         
         // Move:

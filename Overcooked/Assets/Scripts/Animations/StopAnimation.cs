@@ -34,6 +34,9 @@ public class StopAnimation : MonoBehaviour
 
     void Update()
     {
+
+
+
     }
 
     IEnumerator Waiter()
@@ -62,7 +65,5 @@ public class StopAnimation : MonoBehaviour
             Debug.Log("ENTRAMOS EN COLLIDER");
             anim.speed = 0;
         }
-    }
-
-    
+    }    
 }
