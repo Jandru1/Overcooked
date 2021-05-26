@@ -10,6 +10,7 @@ public class StopAnimation : MonoBehaviour
     GameObject o;
 
     private int i = 0;
+    float initialSpeed;
 
     private RawImage Image;
 
@@ -25,6 +26,8 @@ public class StopAnimation : MonoBehaviour
 
         anim.SetBool("ReceiptLeaves", false);
         anim.SetBool("ReceiptEnters", false);
+
+        initialSpeed = anim.speed;
 
         StartCoroutine(Waiter());
     }
@@ -43,7 +46,7 @@ public class StopAnimation : MonoBehaviour
 
         }
         Debug.Log("i = "+ i);
-        if (anim.GetBool("ReceiptEnters"))//Condition of ReceiptDone
+        if (anim.GetBool("ReceiptEnters"))//Condition of ReceiptDone + el anim speed para que siga
         {
             yield return new WaitForSeconds(5);
             anim.SetBool("ReceiptEnters", false);
@@ -60,12 +63,6 @@ public class StopAnimation : MonoBehaviour
             anim.speed = 0;
         }
     }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Image"))
-        {
-          //  anim.enabled = true;
-        }
-    }
+
     
 }
