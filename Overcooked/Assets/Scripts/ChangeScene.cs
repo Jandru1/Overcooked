@@ -8,7 +8,7 @@ public class ChangeScene : MonoBehaviour
 {
 
     public string leveltoLoad;
-    private float timer = 60f;
+    private float timer = 10f;
     private Text timerSeconds;
     // Start is called before the first frame update
     void Start()
