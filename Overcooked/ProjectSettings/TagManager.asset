@@ -9,6 +9,7 @@ TagManager:
   - Image
   - RightHand
   - Food
+  - OllaFire
   layers:
   - Default
   - TransparentFX
