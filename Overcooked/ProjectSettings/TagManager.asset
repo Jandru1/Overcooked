@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Selectable
   - Pickable
+  - Image
+  - RightHand
+  - Food
+  - OllaFire
   layers:
   - Default
   - TransparentFX
