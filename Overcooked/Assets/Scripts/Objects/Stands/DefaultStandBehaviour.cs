@@ -6,15 +6,17 @@ public class DefaultStandBehaviour : MonoBehaviour
 {
     public bool hasItemOnTop;
     public GameObject itemOnTop;
+    public bool hasPickableObject;
     public bool interacting;
+    public bool isBlocking;
 
     
-    private Shader outlineShader;
-    private Shader previousShader;
-    private Collider m_Collider;
-    private Vector3 topPos;
+    protected Shader outlineShader;
+    protected Shader previousShader;
+    protected Collider m_Collider;
+    protected Vector3 topPos;
 
-    void Start(){
+    virtual protected void Start(){
         //Stand initializations:
         m_Collider = GetComponent<Collider>();
         topPos = new Vector3(m_Collider.bounds.center.x, m_Collider.bounds.max.y + 0.01f, m_Collider.bounds.center.z);
@@ -22,7 +24,11 @@ public class DefaultStandBehaviour : MonoBehaviour
         //Top item initializations:
         if(itemOnTop != null){
             hasItemOnTop = true;
-            PlaceItem(itemOnTop);
+            hasPickableObject = itemOnTop.CompareTag("Pickable");
+            if(hasPickableObject)
+                PlaceItem(itemOnTop);
+        } else {
+            hasItemOnTop = false;
         }
 
         //Top item interaction initializations:
@@ -35,12 +41,18 @@ public class DefaultStandBehaviour : MonoBehaviour
 
     public void PlaceItem(GameObject newItem){
         hasItemOnTop = true;
+        hasPickableObject = newItem.CompareTag("Pickable");
         itemOnTop = newItem;
         itemOnTop.GetComponent<PickUpObject>().Place(topPos);
     }
 
+    public void CombineItems(GameObject newItem){
+        Debug.Log("Combine items");
+    }
+
     virtual public GameObject GrabItem(){
         hasItemOnTop = false;
+        hasPickableObject = false;
         itemOnTop.GetComponent<PickUpObject>().PickUp();
         GameObject lastItem = itemOnTop;
         itemOnTop = null;
@@ -62,11 +74,11 @@ public class DefaultStandBehaviour : MonoBehaviour
         if(itemOnTop.GetComponent<Interactable>() != null) { // If the object is interactable
             itemOnTop.GetComponent<Interactable>().StartInteraction(gameObject);
             interacting = true;
+            isBlocking = itemOnTop.GetComponent<Interactable>().isBlocking;
         }
     }
 
     public void finishedInteracting(){
-        Debug.Log("Finished interacting");
         interacting = false;
     }
 }

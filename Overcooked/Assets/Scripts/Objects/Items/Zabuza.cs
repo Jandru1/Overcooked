@@ -5,21 +5,29 @@ using UnityEngine;
 public class Zabuza : MonoBehaviour
 {
 
-    public GameObject espada;
 
-    private Vector3 x;
-    private Quaternion y;
+    private Vector3 original_pos;
+    private Quaternion original_rotation;
 
-    private AudioSource myAudio;
+    private AudioSource audioSource;
+    private Animator animator;
+    private GameObject NarutoRightHand;
+    private GameObject Naruto;
+    private bool firstCut;
 
     // Start is called before the first frame update
     void Start()
     {
-        //espada = GetComponent<GameObject>();
-        x = espada.transform.position;
-        y = espada.transform.rotation;
+        original_pos = transform.position;
+        original_rotation = transform.rotation;
 
-        myAudio = espada.GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
+        
+        NarutoRightHand = GameObject.FindWithTag("RightHand");
+        Naruto = GameObject.FindWithTag("Player");
+
+        animator = Naruto.GetComponent<Animator>();
+        firstCut = true;
 
     }
 
@@ -27,28 +35,20 @@ public class Zabuza : MonoBehaviour
     void Update()
     {
 
-        GameObject NarutoRightHand = GameObject.FindWithTag("RightHand");
-        GameObject Naruto = GameObject.FindWithTag("Player");
-
-        Animator animator = Naruto.GetComponent<Animator>();
-
         if(animator.GetBool("isCutting"))
         {
-            // activate the item
-            //      espada.setActive(true);
-
-            // replacing the feet by the item
-          //  myAudio.Play();
-
-            espada.transform.position = NarutoRightHand.transform.position;
-            espada.transform.rotation = Quaternion.Euler(-123, -10, 7);
-            // espada.transform.parent = NarutoRightHand.transform.parent;
+            if(firstCut){
+                transform.Rotate(-90, 0, 90);
+                firstCut = false;
+            }
+            transform.position = NarutoRightHand.transform.position;
         }
 
         else
         {
-            espada.transform.position = x;
-            espada.transform.rotation = y;
+            transform.position = original_pos;
+            transform.rotation = original_rotation;
+            firstCut = true;
         }
     }
 }

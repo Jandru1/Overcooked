@@ -48,7 +48,6 @@ public class StopAnimation : MonoBehaviour
             ++i;
 
         }
-        Debug.Log("i = "+ i);
         if (anim.GetBool("ReceiptEnters"))//Condition of ReceiptDone + el anim speed para que siga
         {
             yield return new WaitForSeconds(5);
@@ -62,7 +61,6 @@ public class StopAnimation : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Image"))
         {
-            Debug.Log("ENTRAMOS EN COLLIDER");
             anim.speed = 0;
         }
     }    

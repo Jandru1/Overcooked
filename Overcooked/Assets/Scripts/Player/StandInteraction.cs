@@ -56,23 +56,29 @@ public class StandInteraction : MonoBehaviour
     void interactWithStand(){
         // Pick/Drop Logic
         if(Input.GetKeyUp(KeyCode.Space)){ // Pick or drop object with spacebar
-            if(!carryingObject && standScript.hasItemOnTop){  // Pick up object
+            if(!carryingObject && standScript.hasItemOnTop && standScript.hasPickableObject){  // Pick up object
                 selectedObject = standScript.GrabItem();
                 carryingObject = true;
                 animator.SetBool("isCarrying", true);
             }
-            else if(carryingObject && !standScript.hasItemOnTop){  // Place object
-                standScript.PlaceItem(selectedObject);
-                selectedObject = null;
-                carryingObject = false;
-                animator.SetBool("isCarrying", false);
+            else if(carryingObject){  // Place object
+                if(!standScript.hasItemOnTop){  // If there were no items
+                    standScript.PlaceItem(selectedObject);
+                    selectedObject = null;
+                    carryingObject = false;
+                    animator.SetBool("isCarrying", false);
+                } else { // If the item on top can be combined with more items
+                    standScript.CombineItems(selectedObject);
+                }
             }
         }
         
         //Interact with the object in the stand:
         if((Input.GetKeyDown(KeyCode.RightControl) || Input.GetKeyDown(KeyCode.LeftControl)) && !carryingObject){
-            standScript.startInteraction();
-            interactingWithStand = standScript.interacting;
+            if(standScript.itemOnTop){
+                standScript.startInteraction();
+                interactingWithStand = standScript.interacting && standScript.isBlocking;
+            }
         }
     }
 
