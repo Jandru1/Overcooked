@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3929140269518905186}
   - component: {fileID: 3280837357908328116}
   - component: {fileID: 3280837357908328117}
-  - component: {fileID: 3280837357908328118}
+  - component: {fileID: 607175710}
   m_Layer: 3
   m_Name: BoxCarne
   m_TagString: Selectable
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3280837357908328119}
   m_LocalRotation: {x: 0, y: 0.7069834, z: 0.7072302, w: 0}
   m_LocalPosition: {x: -0.44, y: 0.43, z: -115.65}
-  m_LocalScale: {x: 50, y: 50, z: 50}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   hasPickableObject: 0
   interacting: 0
   isBlocking: 0
-  FoodPrefab: {fileID: 0}
+  FoodPrefab: {fileID: 2837033603751373603, guid: 406a24f93ba85164da0705f26c831000, type: 3}
 --- !u!82 &3280837357908328117
 AudioSource:
   m_ObjectHideFlags: 0
@@ -198,7 +198,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!65 &3280837357908328118
+--- !u!65 &607175710
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -209,5 +209,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.020000009, y: 0.020000005, z: 0.020000005}
-  m_Center: {x: 0, y: -7.740923e-10, z: 0.0043290383}
+  m_Size: {x: 2, y: 1.9999999, z: 2}
+  m_Center: {x: 0, y: 1.0024215, z: 0.00000014901161}

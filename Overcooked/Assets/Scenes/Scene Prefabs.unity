@@ -181,11 +181,7 @@ Transform:
   - {fileID: 1519803267}
   - {fileID: 1969238282}
   m_Father: {fileID: 0}
-<<<<<<< HEAD:Overcooked/Assets/Scenes/Scene1.unity
-  m_RootOrder: 10
-=======
   m_RootOrder: 20
->>>>>>> interactable-Jandru:Overcooked/Assets/Scenes/Scene Prefabs.unity
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3505437
 PrefabInstance:
@@ -1387,15 +1383,7 @@ PrefabInstance:
     - target: {fileID: 5494855622913876775, guid: c4fae8b03cbcbbc429ca838d1059ad8c, type: 3}
       propertyPath: itemOnTop
       value: 
-<<<<<<< HEAD:Overcooked/Assets/Scenes/Scene1.unity
-      objectReference: {fileID: 4480140888558057247}
-    - target: {fileID: 5494855622913876775, guid: c4fae8b03cbcbbc429ca838d1059ad8c, type: 3}
-      propertyPath: hasItemOnTop
-      value: 1
-      objectReference: {fileID: 0}
-=======
       objectReference: {fileID: 6126279859499256710}
->>>>>>> interactable-Jandru:Overcooked/Assets/Scenes/Scene Prefabs.unity
     - target: {fileID: 5494855622913876792, guid: c4fae8b03cbcbbc429ca838d1059ad8c, type: 3}
       propertyPath: MinDistance
       value: 1.0483856
@@ -1593,11 +1581,7 @@ PrefabInstance:
     - target: {fileID: 5494855622913876775, guid: c4fae8b03cbcbbc429ca838d1059ad8c, type: 3}
       propertyPath: itemOnTop
       value: 
-<<<<<<< HEAD:Overcooked/Assets/Scenes/Scene1.unity
-      objectReference: {fileID: 0}
-=======
       objectReference: {fileID: 8464321287742786296}
->>>>>>> interactable-Jandru:Overcooked/Assets/Scenes/Scene Prefabs.unity
     - target: {fileID: 5494855622913876775, guid: c4fae8b03cbcbbc429ca838d1059ad8c, type: 3}
       propertyPath: hasItemOnTop
       value: 1
@@ -1876,11 +1860,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< HEAD:Overcooked/Assets/Scenes/Scene1.unity
-  m_RootOrder: 13
-=======
   m_RootOrder: 23
->>>>>>> interactable-Jandru:Overcooked/Assets/Scenes/Scene Prefabs.unity
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &420471211 stripped
 Transform:
@@ -2242,11 +2222,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< HEAD:Overcooked/Assets/Scenes/Scene1.unity
-  m_RootOrder: 11
-=======
   m_RootOrder: 21
->>>>>>> interactable-Jandru:Overcooked/Assets/Scenes/Scene Prefabs.unity
   m_LocalEulerAnglesHint: {x: 56.094, y: 0.302, z: -0.076}
 --- !u!4 &623709777 stripped
 Transform:
@@ -3019,8 +2995,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7acff10242dff4b438a2d50b8cde539a, type: 3}
-<<<<<<< HEAD:Overcooked/Assets/Scenes/Scene1.unity
-=======
 --- !u!1 &856982875
 GameObject:
   m_ObjectHideFlags: 0
@@ -3091,7 +3065,6 @@ MonoBehaviour:
   obj2: {fileID: 919132149155446097, guid: f358bc359da333a4aa8b288bdec96f31, type: 3}
   isInRange: 0
   interactKey: 32
->>>>>>> interactable-Jandru:Overcooked/Assets/Scenes/Scene Prefabs.unity
 --- !u!1001 &859737100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3810,11 +3783,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 87a885f072c70934986056934891819d, type: 3}
       propertyPath: m_RootOrder
-<<<<<<< HEAD:Overcooked/Assets/Scenes/Scene1.unity
-      value: 6
-=======
       value: 16
->>>>>>> interactable-Jandru:Overcooked/Assets/Scenes/Scene Prefabs.unity
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 87a885f072c70934986056934891819d, type: 3}
       propertyPath: m_LocalScale.x
@@ -4147,8 +4116,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7acff10242dff4b438a2d50b8cde539a, type: 3}
-<<<<<<< HEAD:Overcooked/Assets/Scenes/Scene1.unity
-=======
 --- !u!1 &1188958052
 GameObject:
   m_ObjectHideFlags: 0
@@ -4224,7 +4191,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1188958052}
   m_CullTransparentMesh: 1
->>>>>>> interactable-Jandru:Overcooked/Assets/Scenes/Scene Prefabs.unity
 --- !u!4 &1201537606 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7acff10242dff4b438a2d50b8cde539a, type: 3}
@@ -4335,11 +4301,7 @@ Transform:
   - {fileID: 1907217831}
   - {fileID: 1004682342}
   m_Father: {fileID: 0}
-<<<<<<< HEAD:Overcooked/Assets/Scenes/Scene1.unity
-  m_RootOrder: 8
-=======
   m_RootOrder: 18
->>>>>>> interactable-Jandru:Overcooked/Assets/Scenes/Scene Prefabs.unity
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1281516119
 PrefabInstance:
@@ -4350,11 +4312,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 9763d9829467fe640941593dcf6c09a2, type: 3}
       propertyPath: m_RootOrder
-<<<<<<< HEAD:Overcooked/Assets/Scenes/Scene1.unity
-      value: 5
-=======
       value: 15
->>>>>>> interactable-Jandru:Overcooked/Assets/Scenes/Scene Prefabs.unity
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9763d9829467fe640941593dcf6c09a2, type: 3}
       propertyPath: m_LocalScale.x
@@ -4510,8 +4468,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5461493531268969403, guid: c4fae8b03cbcbbc429ca838d1059ad8c, type: 3}
   m_PrefabInstance: {fileID: 1149292300}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:Overcooked/Assets/Scenes/Scene1.unity
-=======
 --- !u!1 &1383814985
 GameObject:
   m_ObjectHideFlags: 0
@@ -4582,7 +4538,6 @@ MonoBehaviour:
   obj2: {fileID: 919132149155446097, guid: f358bc359da333a4aa8b288bdec96f31, type: 3}
   isInRange: 0
   interactKey: 32
->>>>>>> interactable-Jandru:Overcooked/Assets/Scenes/Scene Prefabs.unity
 --- !u!4 &1444600296 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6004055582321327925, guid: 11f683604c07d05418804368c9dab9a6, type: 3}
@@ -5014,11 +4969,7 @@ RectTransform:
   - {fileID: 2064642372}
   - {fileID: 184290079}
   m_Father: {fileID: 0}
-<<<<<<< HEAD:Overcooked/Assets/Scenes/Scene1.unity
-  m_RootOrder: 12
-=======
   m_RootOrder: 22
->>>>>>> interactable-Jandru:Overcooked/Assets/Scenes/Scene Prefabs.unity
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5204,91 +5155,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7acff10242dff4b438a2d50b8cde539a, type: 3}
   m_PrefabInstance: {fileID: 758654655}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:Overcooked/Assets/Scenes/Scene1.unity
---- !u!1001 &1591901607
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1988970790639691336, guid: c8f91644cbb0d1f4cb36a303da17282f, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 8368722655750445499, guid: f73040826314999448e46c6ad7b11d93, type: 3}
-    - target: {fileID: 1988970790639691337, guid: c8f91644cbb0d1f4cb36a303da17282f, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: -5076798556035486163, guid: f73040826314999448e46c6ad7b11d93, type: 3}
-    - target: {fileID: 1988970790639691338, guid: c8f91644cbb0d1f4cb36a303da17282f, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1988970790639691338, guid: c8f91644cbb0d1f4cb36a303da17282f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1988970790639691338, guid: c8f91644cbb0d1f4cb36a303da17282f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1988970790639691338, guid: c8f91644cbb0d1f4cb36a303da17282f, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1988970790639691338, guid: c8f91644cbb0d1f4cb36a303da17282f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1988970790639691338, guid: c8f91644cbb0d1f4cb36a303da17282f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1988970790639691338, guid: c8f91644cbb0d1f4cb36a303da17282f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -116.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1988970790639691338, guid: c8f91644cbb0d1f4cb36a303da17282f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1988970790639691338, guid: c8f91644cbb0d1f4cb36a303da17282f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1988970790639691338, guid: c8f91644cbb0d1f4cb36a303da17282f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1988970790639691338, guid: c8f91644cbb0d1f4cb36a303da17282f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1988970790639691338, guid: c8f91644cbb0d1f4cb36a303da17282f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1988970790639691338, guid: c8f91644cbb0d1f4cb36a303da17282f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1988970790639691338, guid: c8f91644cbb0d1f4cb36a303da17282f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1988970790639691340, guid: c8f91644cbb0d1f4cb36a303da17282f, type: 3}
-      propertyPath: m_Name
-      value: Ramen
-      objectReference: {fileID: 0}
-    - target: {fileID: 1988970790639691341, guid: c8f91644cbb0d1f4cb36a303da17282f, type: 3}
-      propertyPath: destinationPos
-      value: 
-      objectReference: {fileID: 1485607178}
-    m_RemovedComponents:
-    - {fileID: 1988970790639691342, guid: c8f91644cbb0d1f4cb36a303da17282f, type: 3}
-  m_SourcePrefab: {fileID: 100100000, guid: c8f91644cbb0d1f4cb36a303da17282f, type: 3}
-=======
->>>>>>> interactable-Jandru:Overcooked/Assets/Scenes/Scene Prefabs.unity
 --- !u!1001 &1616519876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5496,11 +5362,7 @@ Transform:
   - {fileID: 696210419}
   - {fileID: 73094226}
   m_Father: {fileID: 0}
-<<<<<<< HEAD:Overcooked/Assets/Scenes/Scene1.unity
-  m_RootOrder: 9
-=======
   m_RootOrder: 19
->>>>>>> interactable-Jandru:Overcooked/Assets/Scenes/Scene Prefabs.unity
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1744340944 stripped
 Transform:
@@ -5919,8 +5781,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f89401a0c959f034b97f876c3c664362, type: 3}
   m_PrefabInstance: {fileID: 1499167286}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:Overcooked/Assets/Scenes/Scene1.unity
-=======
 --- !u!1001 &1920633205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5978,7 +5838,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fef78f5a3298e45498ec3c083a8f0668, type: 3}
->>>>>>> interactable-Jandru:Overcooked/Assets/Scenes/Scene Prefabs.unity
 --- !u!4 &1949946281 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6004055582321327925, guid: 11f683604c07d05418804368c9dab9a6, type: 3}
@@ -6072,11 +5931,7 @@ Transform:
   - {fileID: 875884502}
   - {fileID: 1577691416}
   m_Father: {fileID: 0}
-<<<<<<< HEAD:Overcooked/Assets/Scenes/Scene1.unity
-  m_RootOrder: 7
-=======
   m_RootOrder: 17
->>>>>>> interactable-Jandru:Overcooked/Assets/Scenes/Scene Prefabs.unity
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1958644406
 GameObject:
@@ -6131,11 +5986,7 @@ Transform:
   - {fileID: 377003594}
   - {fileID: 1641242616}
   m_Father: {fileID: 0}
-<<<<<<< HEAD:Overcooked/Assets/Scenes/Scene1.unity
-  m_RootOrder: 14
-=======
   m_RootOrder: 24
->>>>>>> interactable-Jandru:Overcooked/Assets/Scenes/Scene Prefabs.unity
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1961994007 stripped
 Transform:
@@ -6348,11 +6199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leveltoLoad: ScoreScreen
-<<<<<<< HEAD:Overcooked/Assets/Scenes/Scene1.unity
-  timer: 60
-=======
   timer: 120
->>>>>>> interactable-Jandru:Overcooked/Assets/Scenes/Scene Prefabs.unity
 --- !u!114 &2064642374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6582,8 +6429,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5461493531268969403, guid: c4fae8b03cbcbbc429ca838d1059ad8c, type: 3}
   m_PrefabInstance: {fileID: 1971576837}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:Overcooked/Assets/Scenes/Scene1.unity
-=======
 --- !u!1001 &580618376550818431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6645,7 +6490,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b83be04ef7d05fb459a090af3a6ce255, type: 3}
->>>>>>> interactable-Jandru:Overcooked/Assets/Scenes/Scene Prefabs.unity
 --- !u!1001 &916133685982053198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6703,11 +6547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 809658125741787182, guid: a2ce4f0fdc8a3db4590571579172e61a, type: 3}
       propertyPath: m_RootOrder
-<<<<<<< HEAD:Overcooked/Assets/Scenes/Scene1.unity
-      value: 4
-=======
       value: 13
->>>>>>> interactable-Jandru:Overcooked/Assets/Scenes/Scene Prefabs.unity
       objectReference: {fileID: 0}
     - target: {fileID: 809658125741787182, guid: a2ce4f0fdc8a3db4590571579172e61a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7178,170 +7018,10 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8164078559759933514}
   m_Mesh: {fileID: -2432090755550338912, guid: 2556935b5520c9d408db5153e131b254, type: 3}
-<<<<<<< HEAD:Overcooked/Assets/Scenes/Scene1.unity
---- !u!1 &3155296246571662525
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2342449688054507015}
-  - component: {fileID: 1670226340344342946}
-  - component: {fileID: 3515377578144259432}
-  - component: {fileID: 3155296246571662526}
-  m_Layer: 0
-  m_Name: EmptyCuttingTable
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &3155296246571662526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3155296246571662525}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c56a5285d92ded428e5627820205281, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionTimeNeeded: 10
-  interacting: 0
-  isBlocking: 0
---- !u!23 &3515377578144259432
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3155296246571662525}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: -3829686518063262624, guid: ea6fa3509fd29484c8898c0fb5bc4c7c, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &4480140888558057247 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5541978994940528223, guid: 1fc1ba266217ed64b87771fa7e32f5d7, type: 3}
-  m_PrefabInstance: {fileID: 8270219624087286080}
-  m_PrefabAsset: {fileID: 0}
---- !u!33 &5241500941160322418
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8383879979926274157}
-  m_Mesh: {fileID: 2534964839176971238, guid: fef78f5a3298e45498ec3c083a8f0668, type: 3}
---- !u!23 &8023578472849629624
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8383879979926274157}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: -6629797300637803691, guid: fef78f5a3298e45498ec3c083a8f0668, type: 3}
-  - {fileID: -2813467912831258332, guid: fef78f5a3298e45498ec3c083a8f0668, type: 3}
-  - {fileID: -6922793697723135513, guid: fef78f5a3298e45498ec3c083a8f0668, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &8164078559759933514
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1151388027554214769}
-  - component: {fileID: 2823090747511900731}
-  - component: {fileID: 1587545474905190063}
-  - component: {fileID: 8164078559759933515}
-  m_Layer: 0
-  m_Name: wall
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &8164078559759933515
-BoxCollider:
-=======
 --- !u!1001 &3199972111496164087
 PrefabInstance:
->>>>>>> interactable-Jandru:Overcooked/Assets/Scenes/Scene Prefabs.unity
   m_ObjectHideFlags: 0
   serializedVersion: 2
-<<<<<<< HEAD:Overcooked/Assets/Scenes/Scene1.unity
-  m_Size: {x: 0.7000002, y: 4, z: 4.0000005}
-  m_Center: {x: 1.6500003, y: 2, z: 0.000000040978193}
---- !u!1001 &8270219624087286080
-=======
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
@@ -7405,74 +7085,12 @@ GameObject:
   m_PrefabInstance: {fileID: 1177506847110103252}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4212218905037563441
->>>>>>> interactable-Jandru:Overcooked/Assets/Scenes/Scene Prefabs.unity
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-<<<<<<< HEAD:Overcooked/Assets/Scenes/Scene1.unity
-    - target: {fileID: 5161899384185232613, guid: 1fc1ba266217ed64b87771fa7e32f5d7, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5161899384185232613, guid: 1fc1ba266217ed64b87771fa7e32f5d7, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5161899384185232613, guid: 1fc1ba266217ed64b87771fa7e32f5d7, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5161899384185232613, guid: 1fc1ba266217ed64b87771fa7e32f5d7, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -117.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5161899384185232613, guid: 1fc1ba266217ed64b87771fa7e32f5d7, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5161899384185232613, guid: 1fc1ba266217ed64b87771fa7e32f5d7, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5161899384185232613, guid: 1fc1ba266217ed64b87771fa7e32f5d7, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5161899384185232613, guid: 1fc1ba266217ed64b87771fa7e32f5d7, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5161899384185232613, guid: 1fc1ba266217ed64b87771fa7e32f5d7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 5161899384185232613, guid: 1fc1ba266217ed64b87771fa7e32f5d7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5161899384185232613, guid: 1fc1ba266217ed64b87771fa7e32f5d7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5541978994940528223, guid: 1fc1ba266217ed64b87771fa7e32f5d7, type: 3}
-      propertyPath: m_Name
-      value: Olla
-      objectReference: {fileID: 0}
-    - target: {fileID: 5541978994940528227, guid: 1fc1ba266217ed64b87771fa7e32f5d7, type: 3}
-      propertyPath: destinationPos
-      value: 
-      objectReference: {fileID: 1485607178}
-    - target: {fileID: 5541978994940528228, guid: 1fc1ba266217ed64b87771fa7e32f5d7, type: 3}
-      propertyPath: interactionTimeNeeded
-      value: 4.24
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1fc1ba266217ed64b87771fa7e32f5d7, type: 3}
---- !u!1 &8383879979926274157
-=======
     - target: {fileID: 2972760390637903701, guid: 8cad5981d89c7284e8b11ebac3fbf5be, type: 3}
       propertyPath: destinationPos
       value: 
@@ -7976,7 +7594,6 @@ GameObject:
   m_PrefabInstance: {fileID: 4212218905037563441}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &8164078559759933514
->>>>>>> interactable-Jandru:Overcooked/Assets/Scenes/Scene Prefabs.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7984,59 +7601,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD:Overcooked/Assets/Scenes/Scene1.unity
-  - component: {fileID: 9156476377475816151}
-  - component: {fileID: 5241500941160322418}
-  - component: {fileID: 8023578472849629624}
-  - component: {fileID: 8383879979926274158}
-  m_Layer: 0
-  m_Name: zabuza sword
-=======
   - component: {fileID: 1151388027554214769}
   - component: {fileID: 2823090747511900731}
   - component: {fileID: 1587545474905190063}
   - component: {fileID: 8164078559759933515}
   m_Layer: 0
   m_Name: wall
->>>>>>> interactable-Jandru:Overcooked/Assets/Scenes/Scene Prefabs.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD:Overcooked/Assets/Scenes/Scene1.unity
---- !u!114 &8383879979926274158
-MonoBehaviour:
-=======
 --- !u!65 &8164078559759933515
 BoxCollider:
->>>>>>> interactable-Jandru:Overcooked/Assets/Scenes/Scene Prefabs.unity
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:Overcooked/Assets/Scenes/Scene1.unity
-  m_GameObject: {fileID: 8383879979926274157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4987aedad2f92d41952bf491466d484, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &9156476377475816151
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8383879979926274157}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.6319919, y: 0, z: 0.2591166}
-  m_LocalScale: {x: 1.263984, y: 1.2639836, z: -27.984241}
-  m_Children: []
-  m_Father: {fileID: 2342449688054507015}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
-=======
   m_GameObject: {fileID: 8164078559759933514}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -8115,4 +7696,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17922370376dc5b40acc10a1d2f12bac, type: 3}
->>>>>>> interactable-Jandru:Overcooked/Assets/Scenes/Scene Prefabs.unity

@@ -91,26 +91,11 @@ public class MovePlayer : MonoBehaviour
                 animator.SetBool("isWalking", false);
             }
 
-<<<<<<< HEAD
             if (!controller.isGrounded)  // Fall
                 playerInput.y -= 10;
             
             // Move:
             controller.Move(playerInput * playerSpeed * Time.deltaTime);
-=======
-        else { // Idle
-
-            dashReloadCount = Math.Max(dashReloadCount - Time.deltaTime, 0.0f);
-            animator.SetBool("isDashing", false);
-            animator.SetBool("isWalking", false);
-        }
-
-        if(animator.GetBool("isCutting"))
-        {
-            ++aux;
-            LoadBar.instance.UserBar(1);
-            Debug.Log(aux);
->>>>>>> interactable-Jandru
         }
 
     }

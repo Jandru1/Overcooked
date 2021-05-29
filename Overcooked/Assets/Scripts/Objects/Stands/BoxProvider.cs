@@ -12,6 +12,7 @@ public class BoxProvider : DefaultStandBehaviour
 
         //Top item initializations:
         itemOnTop = Instantiate(FoodPrefab);
+        itemOnTop.GetComponent<PickUpObject>().destinationPos = GameObject.FindWithTag("pickedObjLoc").transform;
         hasItemOnTop = true;
         hasPickableObject = true;
         PlaceItem(itemOnTop);
