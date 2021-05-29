@@ -105,7 +105,7 @@ public class MovePlayer : MonoBehaviour
         if(animator.GetBool("isCutting"))
         {
             ++aux;
-         //   LoadBar.instance.UserBar(1);
+            LoadBar.instance.UserBar(1);
             Debug.Log(aux);
         }
 
