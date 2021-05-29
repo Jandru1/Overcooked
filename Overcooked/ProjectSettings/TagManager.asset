@@ -8,9 +8,7 @@ TagManager:
   - Pickable
   - Image
   - RightHand
-  - Food
-  - OllaFire
-  - RamenVacio
+  - pickedObjLoc
   layers:
   - Default
   - TransparentFX
