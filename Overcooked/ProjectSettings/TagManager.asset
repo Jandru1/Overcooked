@@ -9,6 +9,12 @@ TagManager:
   - Image
   - RightHand
   - pickedObjLoc
+  - Estrella1Llena
+  - Estrella2Llena
+  - Estrella3Llena
+  - Estrella1Vacia
+  - Estrella2Vacia
+  - Estrella3Vacia
   layers:
   - Default
   - TransparentFX
