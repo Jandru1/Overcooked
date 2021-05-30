@@ -33,7 +33,7 @@ public class Combiner : MonoBehaviour
     public GameObject RamenSoloPollo; 
     public GameObject RamenVacio; 
    private string[] array = { "Plate", "Olla", "OllaConArroz", "OllaConFideos", "AlgaCortada", "AlgaCruda", "ArrozConAlgas", "ArrozCrudo", "ArrozHervido", "CarneCortada", "CarneSinCortar", "Espaguettis", "Fideos", "PescadoCrudo", "PescadoHecho", "PolloCocinao", "PolloVivo", "PlatoAlgaCortada", "PlatoArrozConAlgas", "PlatoSoloArroz", "RamenDeCarne", "RamenDePescado", "RamenDePollo", "RamenEspaguettis", "RamenSoloCarne", "RamenSoloPescado", "RamenSoloPollo", "RamenVacio", "Cortar"};
-   private string[] cuttableItems = { "AlgaCruda", "CarneSinCortar"};
+   private string[] cuttableItems = { "AlgaCruda", "CarneSinCortar","PescadoCrudo","PolloVivo"};
    public List<string> idList;
    private List<GameObject> Prefabs;
    private string[,] COMBINATIONS = new string[,] {{"-1", "-1", "-1", "-1", "PlatoAlgaCortada", "-1", "PlatoArrozConAlgas", "-1", "PlatoSoloArroz", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1"},
@@ -49,10 +49,10 @@ public class Combiner : MonoBehaviour
 {"-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "CarneCortada"},
 {"-1", "-1", "-1", "Olla", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1"},
 {"-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "RamenDeCarne", "RamenDePescado", "RamenDePollo", "RamenEspaguettis", "-1"},
-{"-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1"},
+{"-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "PescadoHecho"},
 {"-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "RamenDePescado", "-1", "-1", "-1", "RamenSoloPescado", "-1"},
 {"-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "RamenDePollo", "-1", "-1", "-1", "RamenSoloPollo", "-1"},
-{"-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1"},
+{"-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "PolloCocinao"},
 {"-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "PlatoArrozConAlgas", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1"},
 {"-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1"},
 {"-1", "-1", "-1", "-1", "PlatoArrozConAlgas", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1"},

@@ -45,19 +45,19 @@ public class PointsScript : MonoBehaviour
             Estrella3Vacia.SetActive(true);
         }
 
-        else if(puntuacion_final_en_porcentaje >25 && puntuacion_final_en_porcentaje < 50)
+        else if(puntuacion_final_en_porcentaje >= 25 && puntuacion_final_en_porcentaje < 50)
         {
             Estrella1Llena.SetActive(true);
             Estrella2Vacia.SetActive(true);
             Estrella3Vacia.SetActive(true);
         }       
-        else if (puntuacion_final_en_porcentaje > 50 && puntuacion_final_en_porcentaje < 75)
+        else if (puntuacion_final_en_porcentaje >= 50 && puntuacion_final_en_porcentaje < 75)
         {
             Estrella1Llena.SetActive(true);
             Estrella2Llena.SetActive(true);
             Estrella3Vacia.SetActive(true);
         }
-        else if (puntuacion_final_en_porcentaje > 75 && puntuacion_final_en_porcentaje <= 100)
+        else if (puntuacion_final_en_porcentaje >= 75 && puntuacion_final_en_porcentaje <= 100)
         {
             Estrella1Llena.SetActive(true);
             Estrella2Llena.SetActive(true);
