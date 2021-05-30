@@ -5,52 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class LoadBar : MonoBehaviour
 {
-    public Slider BarraDeCarga;
-
-    private int maxTime = 151;
-    private int currentTime;
-
-    public static LoadBar instance;
-
-    private void Awake()
+    private GameObject interactable;
+    private Slider slider;
+    private float interactionStepTime;
+    private IEnumerator coroutine;
+    void Awake()
     {
-        instance = this;
-    }
-    void Start()
-    {
-        BarraDeCarga.gameObject.SetActive(false);
-        currentTime = 0;
-        BarraDeCarga.maxValue = maxTime;
-        BarraDeCarga.value = maxTime;
+        interactable = transform.parent.parent.gameObject;
+        interactionStepTime = interactable.GetComponent<Interactable>().interactionTimeNeeded / 100;
+        slider = GetComponent<Slider>();
+        gameObject.SetActive(false);
     }
 
-    public void UserBar(int amount)
+    public void StartInteraction(){
+        coroutine = Interaction();
+        StartCoroutine(coroutine);
+    }
+
+    IEnumerator Interaction()
     {
-        BarraDeCarga.gameObject.SetActive(true);
-
-        if (currentTime == maxTime)
-        {
-            Debug.Log("yata");
-            BarraDeCarga.gameObject.SetActive(false);
+        while(interactable.GetComponent<Interactable>().interacting){
+            slider.value += .01f;
+            yield return new WaitForSeconds(interactionStepTime);
         }
-
-        else
-        {
-            ++currentTime;
-            BarraDeCarga.value = currentTime;
-
-        }
-        /*
-
-        if (currentTime - amount >= 0)
-        {
-            currentTime -= amount;
-            BarraDeCarga.value = currentTime;
-        }
-        else
-        {
-            Debug.Log("not anought stamina");
-        }
-        */
+        StopCoroutine(coroutine);
+        gameObject.SetActive(false);
     }
 }

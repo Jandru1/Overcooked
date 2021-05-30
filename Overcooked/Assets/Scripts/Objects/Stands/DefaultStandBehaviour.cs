@@ -86,9 +86,11 @@ public class DefaultStandBehaviour : MonoBehaviour
 
     public void startInteraction(){
         if(itemOnTop.GetComponent<Interactable>() != null) { // If the object is interactable
-            itemOnTop.GetComponent<Interactable>().StartInteraction(gameObject);
-            interacting = true;
-            isBlocking = itemOnTop.GetComponent<Interactable>().isBlocking;
+            if(itemOnTop.GetComponent<CuttingTable>() == null || itemOnTop.GetComponent<CuttingTable>().CanCut()){
+                itemOnTop.GetComponent<Interactable>().StartInteraction(gameObject);
+                interacting = true;
+                isBlocking = itemOnTop.GetComponent<Interactable>().isBlocking;
+            }
         }
     }
 

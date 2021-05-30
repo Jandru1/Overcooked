@@ -7,6 +7,7 @@ abstract public class Interactable : MonoBehaviour
     
     public bool interacting;
     public bool isBlocking = false;
+    public GameObject loadBar;
 
     protected GameObject stand;
     protected IEnumerator courtine;
@@ -27,6 +28,8 @@ abstract public class Interactable : MonoBehaviour
 
     protected IEnumerator Interaction()
     {
+        loadBar.SetActive(true);
+        loadBar.GetComponent<LoadBar>().StartInteraction();
         while(true){
             yield return new WaitForSeconds(interactionTimeNeeded);
             StopInteraction();

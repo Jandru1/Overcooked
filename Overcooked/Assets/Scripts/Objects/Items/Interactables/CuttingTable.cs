@@ -31,6 +31,10 @@ public class CuttingTable : Interactable
         return false;
     }
 
+    public bool CanCut(){
+        return hasItemOnTop && GameObject.FindWithTag("LevelController").GetComponent<Combiner>().IsCuttable(itemOnTop.GetComponent<Identifiers>().id);
+    }
+
     public GameObject TakeItem(){
         if(!hasItemOnTop)
             return null;
