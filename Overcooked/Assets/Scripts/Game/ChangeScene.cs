@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-
     public string leveltoLoad;
     public float timer = 120f;
     private Text textDisplay;
@@ -32,6 +31,9 @@ public class ChangeScene : MonoBehaviour
         }
         if(timer <=0)
         {
+            int a = SceneManager.GetActiveScene().buildIndex;
+            HoldData.setpoints(100); //puntos totales
+            HoldData.setLastLevel(a); // Ultimo Nivel
             SceneManager.LoadScene(leveltoLoad);
         }
     }
