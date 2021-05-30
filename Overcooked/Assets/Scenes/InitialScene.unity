@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeLevelButton: {fileID: 1307495774}
-  leveltoLoad: Scene Prefabs
+  leveltoLoad: Level 1
 --- !u!1 &210524099
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeLevelButton: {fileID: 922571502}
-  leveltoLoad: Scene Prefabs
+  leveltoLoad: Level 3
 --- !u!114 &210524102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -721,7 +721,7 @@ GameObject:
   - component: {fileID: 922571502}
   - component: {fileID: 922571504}
   m_Layer: 5
-  m_Name: ChangeToLevel2Button (1)
+  m_Name: ChangeToLevel3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1189,7 +1189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeLevelButton: {fileID: 497514759}
-  leveltoLoad: Scene Prefabs
+  leveltoLoad: Level 2
 --- !u!114 &2033851647
 MonoBehaviour:
   m_ObjectHideFlags: 0
