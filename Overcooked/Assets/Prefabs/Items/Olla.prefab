@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5541978994940528225}
   - component: {fileID: 5541978994940528224}
   - component: {fileID: 5541978994940528228}
+  - component: {fileID: -5089773680305373400}
   m_Layer: 0
   m_Name: Olla
   m_TagString: Pickable
@@ -241,6 +242,19 @@ MonoBehaviour:
   interactionTimeNeeded: 4.24
   interacting: 0
   isBlocking: 0
+--- !u!114 &-5089773680305373400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5541978994940528223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3f0e5959729e274eb98141b5cf5c9d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: Olla
 --- !u!1 &8270219623609848554
 GameObject:
   m_ObjectHideFlags: 0

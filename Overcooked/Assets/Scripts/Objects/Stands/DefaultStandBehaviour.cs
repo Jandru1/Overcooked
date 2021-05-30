@@ -39,20 +39,34 @@ public class DefaultStandBehaviour : MonoBehaviour
         outlineShader = Shader.Find("Outlined/Outline");
     }
 
-    public void PlaceItem(GameObject newItem){
+    virtual public bool PlaceItem(GameObject newItem){
         hasItemOnTop = true;
         hasPickableObject = newItem.CompareTag("Pickable");
         itemOnTop = newItem;
         itemOnTop.GetComponent<PickUpObject>().Place(topPos);
+        return true;
     }
 
-    public void CombineItems(GameObject newItem){
-        Debug.Log("Combine items");
+    virtual public bool CombineItems(GameObject newItem){
+        if(itemOnTop.GetComponent<CuttingTable>() != null){
+            hasPickableObject = itemOnTop.GetComponent<CuttingTable>().PutItem(newItem);
+            return hasPickableObject;
+        }
+        GameObject controller = GameObject.FindWithTag("LevelController");
+        GameObject combined = controller.GetComponent<Combiner>().Combine(itemOnTop, newItem);
+        if(combined != null){
+            PlaceItem(combined);
+            return true;
+        }
+        return false;
     }
 
     virtual public GameObject GrabItem(){
-        hasItemOnTop = false;
         hasPickableObject = false;
+        if(itemOnTop.GetComponent<CuttingTable>() != null){
+            return itemOnTop.GetComponent<CuttingTable>().TakeItem();
+        }
+        hasItemOnTop = false;
         itemOnTop.GetComponent<PickUpObject>().PickUp();
         GameObject lastItem = itemOnTop;
         itemOnTop = null;

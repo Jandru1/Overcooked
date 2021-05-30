@@ -9,6 +9,7 @@ TagManager:
   - Image
   - RightHand
   - pickedObjLoc
+  - LevelController
   layers:
   - Default
   - TransparentFX

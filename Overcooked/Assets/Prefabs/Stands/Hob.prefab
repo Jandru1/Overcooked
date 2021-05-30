@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 1575447198367688787}
   - component: {fileID: 152147398963970977}
   - component: {fileID: 152147398963971007}
-  - component: {fileID: 152147398963970976}
+  - component: {fileID: 1754292234}
   m_Layer: 3
   m_Name: Hob
   m_TagString: Selectable
@@ -293,7 +293,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &152147398963970976
+--- !u!114 &1754292234
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -302,9 +302,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1071259199955569030}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e01a21f33c79fc49ba61fe99f3fa9e0, type: 3}
+  m_Script: {fileID: 11500000, guid: cc1f66bffa16d124780ff65f59696f89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hasItemOnTop: 0
   itemOnTop: {fileID: 0}
+  hasPickableObject: 0
   interacting: 0
+  isBlocking: 0
+  OllaPrefab: {fileID: 5541978994940528223, guid: 1fc1ba266217ed64b87771fa7e32f5d7, type: 3}

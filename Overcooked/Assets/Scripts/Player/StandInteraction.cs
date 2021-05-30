@@ -63,12 +63,17 @@ public class StandInteraction : MonoBehaviour
             }
             else if(carryingObject){  // Place object
                 if(!standScript.hasItemOnTop){  // If there were no items
-                    standScript.PlaceItem(selectedObject);
-                    selectedObject = null;
-                    carryingObject = false;
-                    animator.SetBool("isCarrying", false);
+                    carryingObject = !standScript.PlaceItem(selectedObject);
+                    if(!carryingObject){
+                        selectedObject = null;
+                        animator.SetBool("isCarrying", false);
+                    }
                 } else { // If the item on top can be combined with more items
-                    standScript.CombineItems(selectedObject);
+                    if(standScript.CombineItems(selectedObject)){
+                        animator.SetBool("isCarrying", false);
+                        selectedObject = null;
+                        carryingObject = false;
+                    }
                 }
             }
         }

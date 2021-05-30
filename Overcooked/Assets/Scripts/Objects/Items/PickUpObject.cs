@@ -8,7 +8,7 @@ public class PickUpObject : MonoBehaviour
 
     public bool onFloor;
     private bool beingCarried;
-    void Start(){
+    void Awake(){
         destinationPos = GameObject.FindWithTag("pickedObjLoc").transform;
         onFloor = false;
         beingCarried = false;
