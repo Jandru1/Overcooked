@@ -31,6 +31,7 @@ public class PlateInstantiate : MonoBehaviour
     }
     public void NewPlate(int plateID){
         ++totalPlates;
+        HoldData.setpoints(((float) platesDone/(float)totalPlates) * 100);
         GameObject plate = Instantiate(Prefabs[plateID]);
         plate.transform.position = startPos;
         plate.transform.SetParent(transform.parent, false);
@@ -48,6 +49,7 @@ public class PlateInstantiate : MonoBehaviour
                 Destroy(GUIelement);
                 GetComponent<AudioSource>().Play();
                 ++platesDone;
+                HoldData.setpoints(((float)platesDone/(float)totalPlates) * 100);
                 for(int j = i; j < PlatesRequested.Count; ++j){
                     GameObject plate = PlatesRequested[j];
                     plate.GetComponent<PlateGUI>().SetPosition(new Vector3(targetPosX, plate.transform.position.y,plate.transform.position.z));
@@ -58,4 +60,5 @@ public class PlateInstantiate : MonoBehaviour
         }
         return false;
     }
+
 }

@@ -4,14 +4,13 @@ using UnityEngine;
 
 public static class HoldData
 {
-   private static int puntos = 0;
+   private static float puntos = 0f;
    private static int LastLevel;
-    // Start is called before the first frame update
-   public static void setpoints(int value)
+   public static void setpoints(float value)
     {
         puntos = value;
     }
-    public static int getpoints()
+    public static float getpoints()
     {
         return puntos;
     }

@@ -12,11 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 1.unity
     guid: 3af3d62b742caa342a5e1381b1aaf5b9
   - enabled: 1
-    path: Assets/Scenes/ScoreScreen.unity
-    guid: 2e2105fda1b33b44ebc9d365b7a841e8
-  - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: 524a32c6dc9753049ade470aa687f073
+  - enabled: 1
+    path: Assets/Scenes/ScoreScreen.unity
+    guid: 2e2105fda1b33b44ebc9d365b7a841e8
   - enabled: 1
     path: Assets/Scenes/Scene Prefabs.unity
     guid: ad6cdb053d75fca4889975f6b5d3fdf5

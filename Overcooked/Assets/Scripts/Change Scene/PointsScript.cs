@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class PointsScript : MonoBehaviour
 {
 
-    public int points;
+    public float points;
     public int LastLevel;
     public Text text;
 
-    public int puntuacion_final_en_porcentaje;
+    public float puntuacion_final_en_porcentaje;
 
     private GameObject Estrella1Llena;
     private GameObject Estrella2Llena;
@@ -63,14 +63,5 @@ public class PointsScript : MonoBehaviour
             Estrella2Llena.SetActive(true);
             Estrella3Llena.SetActive(true);
         }
-
-
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
