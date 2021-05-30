@@ -6,10 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/InitialScene.unity
+    guid: 36f310b5c20354545a1a9b8709ef2b0f
+  - enabled: 1
     path: Assets/Scenes/Scene Prefabs.unity
     guid: ad6cdb053d75fca4889975f6b5d3fdf5
   - enabled: 1
-    path: Assets/Scenes/Level 2.unity
+    path: Assets/Scenes/Level2.unity
     guid: 524a32c6dc9753049ade470aa687f073
   - enabled: 1
     path: Assets/Scenes/ScoreScreen.unity
