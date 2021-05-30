@@ -26,7 +26,7 @@ public class PlateInstantiate : MonoBehaviour
         PlatesRequested = new List<GameObject>();
         totalPlates = 0;
         platesDone = 0;
-        targetPosX = 300f;
+        targetPosX = 100f;
         startPos = new Vector3(457f,162f,0);
     }
     public void NewPlate(int plateID){
@@ -37,7 +37,7 @@ public class PlateInstantiate : MonoBehaviour
         plate.transform.SetParent(transform.parent, false);
         plate.GetComponent<PlateGUI>().SetPosition(new Vector3(targetPosX,plate.transform.position.y,plate.transform.position.z));
         PlatesRequested.Add(plate);
-        targetPosX += 500f;
+        targetPosX += 200f;
     }
 
     public bool DonePlate(string plateID){
@@ -53,7 +53,7 @@ public class PlateInstantiate : MonoBehaviour
                 for(int j = i; j < PlatesRequested.Count; ++j){
                     GameObject plate = PlatesRequested[j];
                     plate.GetComponent<PlateGUI>().SetPosition(new Vector3(targetPosX, plate.transform.position.y,plate.transform.position.z));
-                    targetPosX += 500f; 
+                    targetPosX += 200f; 
                 }
                 return true;
             }

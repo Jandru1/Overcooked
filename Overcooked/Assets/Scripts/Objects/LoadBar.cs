@@ -9,7 +9,7 @@ public class LoadBar : MonoBehaviour
     private Slider slider;
     private float interactionStepTime;
     private IEnumerator coroutine;
-    void Start()
+    void Awake()
     {
         interactable = transform.parent.parent.gameObject;
         interactionStepTime = interactable.GetComponent<Interactable>().interactionTimeNeeded / 100;
@@ -18,6 +18,7 @@ public class LoadBar : MonoBehaviour
     }
 
     public void StartInteraction(){
+        slider.value = 0f;
         coroutine = Interaction();
         StartCoroutine(coroutine);
     }

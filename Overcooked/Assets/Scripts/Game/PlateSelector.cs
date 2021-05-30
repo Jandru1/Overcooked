@@ -17,6 +17,10 @@ public class PlateSelector : MonoBehaviour
         if(level == 1){
             PossiblePlates.Add(plates[0]); 
         }
+        if(level == 2){
+            PossiblePlates.Add(plates[0]); 
+            PossiblePlates.Add(plates[3]); 
+        }
 
         instantiator = transform.Find("Instantiator").gameObject;
         StartCoroutine (waiter());
