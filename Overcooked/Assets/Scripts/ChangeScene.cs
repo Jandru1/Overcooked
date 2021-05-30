@@ -31,8 +31,9 @@ public class ChangeScene : MonoBehaviour
         }
         if(timer <=0)
         {
+            int a = SceneManager.GetActiveScene().buildIndex;
             HoldData.setpoints(100); //puntos totales
-            HoldData.setLastLevel(1); // Ultimo Nivel
+            HoldData.setLastLevel(a); // Ultimo Nivel
             SceneManager.LoadScene(leveltoLoad);
         }
     }

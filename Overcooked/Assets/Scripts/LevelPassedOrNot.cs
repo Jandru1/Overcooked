@@ -11,7 +11,7 @@ public class LevelPassedOrNot : MonoBehaviour
     void Start()
     {
         points = HoldData.getpoints();
-        if (points >=25) text.text = "LevelPassed!!";
+        if (points >=25) text.text = "Level " + HoldData.getLevel() + " Passed!!";
         else text.text = "Try Again:(";
     }
 
