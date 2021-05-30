@@ -242,6 +242,9 @@ MonoBehaviour:
   interactionTimeNeeded: 4.24
   interacting: 0
   isBlocking: 0
+  isBurning: 0
+  cooked: 0
+  insidePrefab: {fileID: 0}
 --- !u!114 &-5089773680305373400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1227,7 +1230,7 @@ ParticleSystem:
     m_BurstCount: 0
     m_Bursts: []
   SizeModule:
-    enabled: 1
+    enabled: 0
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -5072,7 +5075,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0eb2ae78226c4184a995db803c4c93a8, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.144
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0

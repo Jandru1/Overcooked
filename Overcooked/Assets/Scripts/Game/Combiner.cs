@@ -65,7 +65,7 @@ public class Combiner : MonoBehaviour
 {"-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "RamenDePollo", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1"},
 {"-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "RamenSoloCarne", "-1", "-1", "RamenEspaguettis", "-1", "RamenSoloPescado", "RamenSoloPollo", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1"},
 {"-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1"}};
-   void Start () {
+   void Awake () {
         idList = new List<string>(array);
 
         Prefabs = new List<GameObject>();
@@ -140,4 +140,5 @@ public class Combiner : MonoBehaviour
         }
         return null;
     }
+
 }
