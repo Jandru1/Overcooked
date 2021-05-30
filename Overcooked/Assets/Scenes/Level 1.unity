@@ -5428,7 +5428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leveltoLoad: ScoreScreen
-  timer: 120
+  timer: 13
 --- !u!114 &2064642374
 MonoBehaviour:
   m_ObjectHideFlags: 0
