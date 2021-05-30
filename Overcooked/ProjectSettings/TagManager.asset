@@ -15,6 +15,8 @@ TagManager:
   - Estrella1Vacia
   - Estrella2Vacia
   - Estrella3Vacia
+  - LevelController
+  - PlateInstantiator
   layers:
   - Default
   - TransparentFX

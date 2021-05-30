@@ -1827,11 +1827,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602655404}
   m_LocalRotation: {x: 0.4701929, y: 0.0026392788, z: -0.0018280491, w: 0.8825578}
-  m_LocalPosition: {x: 0, y: 11.07, z: -123.48}
+  m_LocalPosition: {x: 0, y: 11.069946, z: -123.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 56.094, y: 0.302, z: -0.076}
 --- !u!4 &623709777 stripped
 Transform:
@@ -3523,9 +3523,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1193360451}
   - component: {fileID: 1193360452}
+  - component: {fileID: 1193360453}
   m_Layer: 5
   m_Name: Instantiator
-  m_TagString: Untagged
+  m_TagString: PlateInstantiator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3561,12 +3562,109 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e59ea7df93d72a6448a94c76a2128520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlatoArrozConAlgasGUI: {fileID: 3099209248089238537, guid: 17535ced141bde24b85d70356736a073, type: 3}
-  RamenDeCarneGUI: {fileID: 0}
-  RamenDePescadoGUI: {fileID: 0}
-  RamenDePolloGUI: {fileID: 0}
+  PlatoArrozConAlgasGUI: {fileID: 5591030555622962, guid: 17535ced141bde24b85d70356736a073, type: 3}
+  RamenDeCarneGUI: {fileID: 1586261914022937314, guid: d44bba31c883c554cbf378ad65056dc6, type: 3}
+  RamenDePescadoGUI: {fileID: 8777380516991222579, guid: 6dd0b0892f397a8459017bf00fa09e76, type: 3}
+  RamenDePolloGUI: {fileID: 4383617279050228499, guid: 151ce13625eab3548a90807903f82299, type: 3}
   totalPlates: 0
   platesDone: 0
+  targetPosX: 0
+--- !u!82 &1193360453
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193360450}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 57000abe3808330489dec42d56daf3b5, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.416
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &1201537606 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7acff10242dff4b438a2d50b8cde539a, type: 3}
@@ -3848,7 +3946,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5161899384185232613, guid: 1fc1ba266217ed64b87771fa7e32f5d7, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5161899384185232613, guid: 1fc1ba266217ed64b87771fa7e32f5d7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4238,7 +4336,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 602655406}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -4421,8 +4519,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 1
   rangeTimeBetweenPlates:
-  - 5
   - 20
+  - 40
 --- !u!4 &1519803267 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7acff10242dff4b438a2d50b8cde539a, type: 3}
@@ -4767,7 +4865,7 @@ Transform:
   - {fileID: 1735971857}
   - {fileID: 2836864}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1706566179 stripped
 Transform:
@@ -5884,7 +5982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 809658125741787182, guid: a2ce4f0fdc8a3db4590571579172e61a, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 809658125741787182, guid: a2ce4f0fdc8a3db4590571579172e61a, type: 3}
       propertyPath: m_LocalPosition.x
